@@ -8,7 +8,6 @@ import com.java.main.entity.Users;
 
 @Repository
 public interface UserRepository extends JpaRepository<Users, Integer> {
-
 	
 	public Users findByEmail(String email);
 }

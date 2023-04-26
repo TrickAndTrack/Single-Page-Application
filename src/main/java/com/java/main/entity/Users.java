@@ -1,14 +1,10 @@
 package com.java.main.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import org.hibernate.annotations.ColumnDefault;
-
 import lombok.AllArgsConstructor;
-import lombok.Builder.Default;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -32,8 +28,7 @@ public class Users {
     private Long phonenumber;
     private String email;
     private String pwd;
-    @Column(columnDefinition = "varchar(255) default 'USER'")
-//    @ColumnDefault("'USER'")
-    private String Role;
+    private String Role = "USER";
+    private boolean verified;
 	
 }
